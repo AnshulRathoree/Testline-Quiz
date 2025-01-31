@@ -1,70 +1,103 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# React Quiz App  
+[LIVE LINK](https://anshulRathoree.github.io/Testline-Quiz)
+This is a dynamic and interactive quiz application built using React.js. The app provides an engaging way to test your knowledge with timed questions, score tracking, and a beautiful confetti animation for celebrating your achievements.  
 
-## Available Scripts
+## Features  
 
-In the project directory, you can run:
+- **Dynamic Quiz Loading**: The app fetches quiz data dynamically from an external JSON file.  
+- **Timer Functionality**: Each question has a 30-second timer. If the timer runs out, the app automatically moves to the next question.  
+- **Real-Time Feedback**: Correct and incorrect answers are handled in real-time, with score updates.  
+- **Responsive Design**: The app adjusts to different screen sizes for a seamless experience.  
+- **Confetti Celebration**: Enjoy a confetti animation after completing the quiz.  
+- **Error Handling**: Handles loading errors gracefully with a user-friendly message.  
 
-### `npm start`
+## Technologies Used  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js**: For building the user interface and managing state.  
+- **React Icons**: For attractive and consistent icons (`FiAlertCircle`).  
+- **Confetti**: A confetti library for celebratory animations.  
+- **CSS**: For styling the components.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components  
 
-### `npm test`
+1. **Navbar**: Displays the app's navigation bar.  
+2. **StartScreen**: The welcome screen with a button to start the quiz.  
+3. **QuizScreen**: The main screen where questions are displayed, along with answer options and a countdown timer.  
+4. **ResultScreen**: Displays the final score and offers an option to restart the quiz.  
+5. **Loader**: A loading spinner for better UX during data fetch.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run the Project  
 
-### `npm run build`
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/AnshulRathoree/Testline-Quiz  
+   cd react-quiz-app  
+   ```  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:  
+   ```bash  
+   npm install  
+   ```  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:  
+   ```bash  
+   npm start  
+   ```  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open your browser and navigate to `http://localhost:3000` to see the app in action.  
 
-### `npm run eject`
+## Project Workflow  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. The app fetches quiz data from a JSON file located in the `public` folder.  
+2. The `App` component initializes states for quiz data, timer, score, selected options, and more.  
+3. Each question displays a timer of 30 seconds, managed using the `useEffect` hook.  
+4. Correct answers update the score, and incorrect answers move to the next question after a brief delay.  
+5. When the quiz is complete, the `ResultScreen` component displays the final score with a confetti celebration.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Folder Structure  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```  
+src/  
+├── components/
+    ├── /styles
+        ├── Navbar.css  
+│       ├── StartScreen.css
+│       ├── QuizScreen.css 
+│       ├── ResultScreen.css  
+│       └── Loader.css
+│   ├── Navbar.js  
+│   ├── StartScreen.js  
+│   ├── QuizScreen.js  
+│   ├── ResultScreen.js  
+│   └── Loader.js  
+├── App.css  
+├── App.js  
+└── index.js  
+```  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Future Improvements  
 
-## Learn More
+- Add more customization options, such as difficulty levels or quiz categories.  
+- Integrate with a backend API for dynamic quiz generation.  
+- Implement a leaderboard to display user scores globally.  
+- Add support for multimedia questions (e.g., images, videos, or audio).  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to fork the repository and submit pull requests. Contributions are always welcome!  
 
-### Code Splitting
+## License  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project is licensed under the MIT License.  
 
-### Analyzing the Bundle Size
+---  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Credits  
 
-### Making a Progressive Web App
+- [React.js](https://reactjs.org/)  
+- [React Icons](https://react-icons.github.io/react-icons/)  
+- [Confetti Library](https://www.npmjs.com/package/react-confetti)  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy the app, and happy quizzing! 🚀  
