@@ -1,5 +1,5 @@
 
-```markdown
+
 # React Quiz App  
 [LIVE LINK](https://anshulRathoree.github.io/Testline-Quiz)
 This is a dynamic and interactive quiz application built using React.js. The app provides an engaging way to test your knowledge with timed questions, score tracking, and a beautiful confetti animation for celebrating your achievements.  
