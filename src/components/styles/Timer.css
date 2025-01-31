@@ -1,0 +1,29 @@
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .timer-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .timer-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue) 0%, var(--secondary-blue) 100%);
+    transition: width 0.5s ease;
+  }
+  
+  .timer-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-blue);
+  }
+  

@@ -1,0 +1,252 @@
+/* General Styles for Quiz Screen */
+.quiz-screen {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 12px 40px var(--shadow-blue);
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .quiz-screen:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px var(--shadow-blue);
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    margin: 2rem 0;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--secondary-blue) 100%);
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+  }
+  
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .question-text {
+    font-size: 1.75rem;
+    color: var(--dark-blue);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Option Buttons Styling */
+  .options-container {
+    display: grid;
+    gap: 2rem; /* Increased gap between options for better spacing */
+  }
+  
+  .option-btn {
+    padding: 1.75rem 2rem; /* Increased padding for better spacing */
+    border: 2px solid var(--accent-blue);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    cursor: pointer; /* Ensures pointer cursor */
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px var(--shadow-blue);
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .option-btn:hover {
+    transform: scale(1.05); /* Hover scales the option slightly */
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    box-shadow: 0 10px 30px var(--shadow-blue);
+  }
+  
+  .option-btn:active {
+    transform: scale(0.98); /* Slight scale effect for active button */
+    box-shadow: 0 3px 10px var(--shadow-blue); /* Smaller shadow when clicked */
+    background: var(--primary-blue); /* Pressed state background */
+    color: var(--white); /* Text color change to white */
+    border-color: var(--primary-blue); /* Highlight border color when clicked */
+    transition: all 0.2s ease;
+  }
+  
+  .option-btn.selected {
+    border-color: var(--primary-blue);
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    font-weight: 600;
+    box-shadow: 0 6px 20px var(--primary-blue);
+  }
+  
+  .option-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px var(--primary-blue);
+  }
+  
+  .option-btn.selected::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    width: 28px;
+    height: 28px;
+    background: var(--primary-blue);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .option-btn {
+      font-size: 1.1rem; /* Slightly smaller font for mobile devices */
+      padding: 1.25rem 1.5rem; /* Reduced padding for mobile devices */
+    }
+  
+    .question-text {
+      font-size: 1.4rem; /* Slightly smaller font for mobile */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .option-btn {
+      font-size: 1.4rem; /* Larger text for better readability on desktop */
+      padding: 1.5rem 2rem; /* Increased padding on desktop */
+    }
+  
+    .question-text {
+      font-size: 2rem; /* Larger font size for questions on desktop */
+    }
+  }
+  
+  /* Add margin between the options */
+  .option {
+    padding: 1.25rem;
+    border: 2px solid var(--accent-blue);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--dark-blue);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+    margin-top: 1rem; /* Adds spacing between options */
+  }
+  
+  .option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px var(--shadow-blue);
+  }
+  
+  /* Add the arrow when hovering */
+  .option:hover::after {
+    content: '';
+    position: absolute;
+    right: 50px; /* Position the arrow 50px to the right */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--accent-blue); /* Arrow color */
+    transition: transform 0.3s ease;
+  }
+  
+  /* Option selected effect */
+  .option.selected {
+    border-color: var(--primary-blue);
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    font-weight: 600;
+  }
+  
+  /* Arrow for the selected option */
+  .option.selected::after {
+    content: '';
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) scale(1.2); /* Slightly enlarge the arrow when selected */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--primary-blue); /* Arrow color for selected option */
+  }
+  
+  /* Adjust for the hover/click state of the option container */
+  .option-text {
+    display: inline-block;
+    width: calc(100% - 60px); /* Make space for the arrow */
+  }
+  
+  .option-number {
+    font-weight: bold;
+  }
+ /* Restart Button Styles */
+.restart-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px var(--shadow-blue);
+  }
+  
+  .restart-button:hover {
+    background-color: var(--secondary-blue);
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px var(--shadow-blue);
+  }
+  
+  .restart-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px var(--shadow-blue);
+  }
+  
+  .restart-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px var(--primary-blue);
+  }
+  
+  /* Mobile Responsiveness for the Button */
+  @media (max-width: 600px) {
+    .restart-button {
+      font-size: 0.6rem; /* Smaller font on mobile devices */
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .restart-button {
+      font-size: 1rem; /* Larger font size on desktop */
+      padding: 1.2rem 2.5rem;
+    }
+  }
+   

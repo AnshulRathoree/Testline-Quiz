@@ -1,0 +1,24 @@
+:root {
+  --primary-blue: #2A6B84;
+  --secondary-blue: #3D9DB3;
+  --accent-blue: #88C9F2;
+  --dark-blue: #1A4A5A;
+  --shadow-blue: rgba(42, 107, 132, 0.15);
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--white);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+* {
+  cursor: default !important;
+}

@@ -1,0 +1,52 @@
+.start-screen {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px var(--shadow-blue);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  .start-screen h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .start-screen p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .start-button {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    padding: 1.25rem 2.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--shadow-blue);
+  }
+  
+  .start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-blue);
+  }
+  
+  .start-button:active {
+    transform: scale(0.98);
+  }
+  
+  .start-button:focus {
+    outline: 2px solid #0056b3;
+  }
+  
