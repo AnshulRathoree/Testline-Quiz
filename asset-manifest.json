@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Testline-Quiz/static/css/main.d0899f50.css",
+    "main.js": "/Testline-Quiz/static/js/main.5eed6076.js",
+    "static/js/488.2c2c4401.chunk.js": "/Testline-Quiz/static/js/488.2c2c4401.chunk.js",
+    "index.html": "/Testline-Quiz/index.html",
+    "main.d0899f50.css.map": "/Testline-Quiz/static/css/main.d0899f50.css.map",
+    "main.5eed6076.js.map": "/Testline-Quiz/static/js/main.5eed6076.js.map",
+    "488.2c2c4401.chunk.js.map": "/Testline-Quiz/static/js/488.2c2c4401.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0899f50.css",
+    "static/js/main.5eed6076.js"
+  ]
+}
