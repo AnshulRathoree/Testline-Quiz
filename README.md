@@ -80,13 +80,6 @@ src/
 └── index.js  
 ```  
 
-## Future Improvements  
-
-- Add more customization options, such as difficulty levels or quiz categories.  
-- Integrate with a backend API for dynamic quiz generation.  
-- Implement a leaderboard to display user scores globally.  
-- Add support for multimedia questions (e.g., images, videos, or audio).  
-
 ## Contributing  
 
 Feel free to fork the repository and submit pull requests. Contributions are always welcome!  
